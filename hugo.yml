@@ -1,0 +1,15 @@
+baseURL: "https://www.sekiro.xyz"
+title : 'Moda'
+theme : [PaperMod]
+enableRobotsTXT: true
+params:
+  assets:
+    favicon: favicon.ico
+    apple_touch_icon: apple-touch-icon.png
+  label:
+    icon: "logo.png"
+menus: 
+  main:
+    - identifier: "tags"
+      name: "Tags"
+      url: "/tags/"

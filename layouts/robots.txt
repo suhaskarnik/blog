@@ -1,0 +1,9 @@
+User-agent: PiplBot
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: FacebookBot
+User-agent: CCbot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+{{ range .Pages }}Disallow: {{ .RelPermalink }}
+{{ end }}
