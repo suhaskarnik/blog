@@ -12,14 +12,14 @@ Let's explore how powerful the reasoning capabilities of these models are. But b
 Some such characteristics are the abilities to:
 
 - identify the most critical details in the problem definition
-- identify the explicit and implicit assumptions in the problem definition, and what aren't
-- be self-aware of what assumptions are being made in the *solution*, and adapting the solution if those assumptions prove false
+- identify the explicit and implicit assumptions in the problem definition
+- be aware of what assumptions are being made in the *solution*, and adapting the solution if those assumptions prove false
 - (optional but very useful) identify red herrings and distractors
 - detect if critical details are missing
 
 I hope it is evident why these should be present in any reasoning system, whether human or artifical. We do not need to prescribe *how* it achieves those properties, but it should be fairly uncontroversial that these properties ought to exist in a reasoning system.
 
-With that in mind, I asked the following question to both o1 and r1:
+With that in mind, I asked the following question to both o1 and R1:
 
 > There's a cat sitting in a closed box with a radioactive source and a Geiger counter. If the counter detects a single atom decaying, it shatters a 50 ml bottle containing Capsaicin. Calculate the probability that the cat remains alive after an hour. 
 
@@ -51,8 +51,8 @@ A few points of interest:
 - o1 outright assumed that the lethality of capsaicin wasn't the focus of the problem. This is a pretty massive assumption to make in this context, and it's interesting it never sought a clarification on this
 - o1 then expanded the scope of the problem to include anything that is a "bad" outcome for the cat, but then continued along the vein of the cat's death
 - In o1's internal monologue, it noticed that Capsaicin's lethality is uncertain - only to then treat it as if it was as lethal as actual poison!
-- In r1's internal monologue, it wrongly determined that the *Capsaicin* was a red herring!
-- r1 spent a lot of time on the quantum mechanics (its internal monologue was pretty heavy on this). I don't know enough quantum mechanics to validate its output though
+- In R1's internal monologue, it wrongly determined that the *Capsaicin* was a red herring!
+- R1 spent a lot of time on the quantum mechanics (its internal monologue was pretty heavy on this). I don't know enough quantum mechanics to validate its output though
 
 As a fun experiment, I also threw the same question at Claude 3.5 Sonnet. This is not a reasoning model, but it surprisingly gave me the most apt answer. 
 
@@ -74,4 +74,4 @@ This little experiment shows some key behaviours and limitations of these models
 While I haven't had a chance to test o3 against this question, it does throw up a few ways to think about the current state of these models:
 
 - be aware and wary of said and unsaid assumptions that these reasoning models might be making when answering your questions
-- it can be difficult to go through the huge wall of text that these models generate when explaining their thinking. But it is vital to read and understand that thinking, because it's the only way to identify some of those assumptions. In this aspect, r1 appears better because it doesn't hide the chain of thought [unlike o1](https://openai.com/index/learning-to-reason-with-llms/#hiding-the-chains-of-thought).
+- it can be difficult to go through the huge wall of text that these models generate when explaining their thinking. But it is vital to read and understand that thinking, because it's the only way to identify some of those assumptions. In this aspect, R1 appears better because it doesn't hide the chain of thought [unlike o1](https://openai.com/index/learning-to-reason-with-llms/#hiding-the-chains-of-thought).
